@@ -1,7 +1,5 @@
 .payment-order {
-  &__content {
-    justify-content: flex-end;
-  }
+  justify-content: flex-end;
 
   &__card {
     display: flex;
@@ -15,6 +13,7 @@
   &__header {
     display: flex;
     align-items: center;
+    margin-bottom: 3px;
     padding-top: 15px;
     padding-right: 16px;
     padding-bottom: 18px;
@@ -30,6 +29,7 @@
       background: url("../img/svg/icon-close.svg");
       background-repeat: no-repeat;
       border: none;
+      cursor: pointer;
     }
 
     & h2 {
@@ -45,12 +45,66 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 26px;
-    padding-right: 145px;
-    padding-left: 190px;
-    margin-right: 17px;
-    height: 520px;
+    padding-right: 160px;
+    padding-left: 184px;
+    margin-right: 5px;
+    height: 512px;
     overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 100px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &::-webkit-scrollbar {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      width: 6px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background-color: rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &__transaction-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+    padding-right: 92px;
+    padding-bottom: 16px;
+    padding-left: 83px;
+    width: 100%;
+  }
+
+  &__description {
+    position: relative;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    width: 545px;
+    background-color: #f2f2f2;
+    box-shadow:
+      0 0 1px rgba(0, 0, 0, 0.239102),
+      0 4px 15px rgba(0, 0, 0, 0.0869282),
+      0 2px 3px rgba(0, 0, 0, 0.0651891);
+    mix-blend-mode: normal;
+    z-index: 0;
+
+    & > p {
+      @include text-block-reset;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__commission {
+    padding-top: 23px;
+    padding-right: 25px;
+    padding-bottom: 26px;
 
     & > p {
       @include text-block-reset;
@@ -61,11 +115,7 @@
     }
   }
 
-  &__transaction-information {
-    margin-bottom: 16px;
-  }
-
-  &__company-card {
-    margin-bottom: 22px;
+  &__footer {
+    margin-top: 6px;
   }
 }

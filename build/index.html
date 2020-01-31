@@ -7,7 +7,7 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <div style="display: none;">
+    <div class="sprite">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="spr-ask" viewBox="0 0 22 20">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V0.866035V14.7226V15.5886H0.846154H4.23077V18.1867V20L5.60577 18.8633L9.59856 15.5886H21.1538H22V14.7226V0.866035V0H21.1538H0.846154H0ZM1.69232 1.73206H20.3077V13.8565H9.30771H9.01684L8.77886 14.046L5.92309 16.3735V14.7226V13.8565H5.07694H1.69232V1.73206ZM13.0625 3.84302L11.8462 5.08794L13.6442 6.92827H5.9231V8.66034H13.6442L11.7933 10.5548L13.0096 11.7997L16.2885 8.41677L16.8967 7.7943L16.2885 7.17184L13.0625 3.84302Z" fill="#2B2B2B"></path>
 </symbol><symbol id="spr-more" viewBox="0 0 22 4">
@@ -18,7 +18,7 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0L9.8366 1.51203L7.45752 6.84994L1.64706 7.4685L0 7.65178L1.23529 8.75143L5.55882 12.669L4.34641 18.3963L4.00327 20L5.44444 19.1753L10.5 16.2428L15.5556 19.1753L16.9967 20L16.6536 18.3963L15.4412 12.669L19.7647 8.75143L21 7.65178L19.3529 7.4685L13.5425 6.84994L11.1634 1.51203L10.5 0ZM10.5 3.5968L12.3758 7.83506L12.5588 8.22452L12.9706 8.27034L17.5687 8.75144L14.1373 11.8442L13.817 12.142L13.9085 12.5544L14.8693 17.0676L10.866 14.7766L10.5 14.5475L10.134 14.7766L6.13074 17.0676L7.09153 12.5544L7.18303 12.142L6.86277 11.8442L3.4314 8.75144L8.02944 8.27034L8.4412 8.22452L8.62421 7.83506L10.5 3.5968Z" fill="#2B2B2B"></path>
 </symbol></svg>
     </div>
-
+    <h1 class="visually-hidden">Модуль Банк</h1>
     <header class="main-header">
       <div class="main-header__content  content">
         <div class="main-header__logo-wrapper">
@@ -30,65 +30,63 @@
             <span class="visually-hidden">Поиск</span>
           </label>
         </div>
-        <div class="main-header__nav-wrapper">
-          <nav class="main-header__nav  main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item  active">
-                <a class="main-nav__link" href="#">Деньги</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Контакты</a>
-              </li>
-              <li class="main-nav__item  main-nav__item--list">
-                <a class="main-nav__link" href="#">Услуги</a>
-                <ul class="main-nav__deep-list">
-                  <li class="main-nav__deep-item">
-                    <a class="main-nav__deep-link" href="#">Услуга 1</a>
-                  </li>
-                  <li class="main-nav__deep-item">
-                    <a class="main-nav__deep-link" href="#">Услуга 2</a>
-                  </li>
-                  <li class="main-nav__deep-item">
-                    <a class="main-nav__deep-link" href="#">Услуга 3</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <a class="main-header__new-payment" href="#">
-            <span class="visually-hidden">Новый платёж</span>
-          </a>
-          <a class="main-header__notifications  active" href="#" data-value="2">
-            <span class="visually-hidden">Уведомления</span>
-          </a>
-          <div class="main-header__profile  profile">
-            <a class="profile__name" href="#">ООО «Родные Просторы»</a>
-            <ul class="profile__list">
-              <li class="profile__item">
-                <a class="profile__link" href="#">Опция 1</a>
-              </li>
-              <li class="profile__item">
-                <a class="profile__link" href="#">Опция 2</a>
-              </li>
-              <li class="profile__item">
-                <a class="profile__link" href="#">Опция 3</a>
-              </li>
-            </ul>
-          </div>
+        <nav class="main-header__nav  main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item  active">
+              <a class="main-nav__link" href="#">Деньги</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Контакты</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--list">
+              <a class="main-nav__link" href="#">Услуги</a>
+              <ul class="main-nav__deep-list">
+                <li class="main-nav__deep-item">
+                  <a class="main-nav__deep-link" href="#">Услуга 1</a>
+                </li>
+                <li class="main-nav__deep-item">
+                  <a class="main-nav__deep-link" href="#">Услуга 2</a>
+                </li>
+                <li class="main-nav__deep-item">
+                  <a class="main-nav__deep-link" href="#">Услуга 3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a class="main-header__new-payment" href="#">
+          <span class="visually-hidden">Новый платёж</span>
+        </a>
+        <a class="main-header__notifications  active" href="#" data-value="2">
+          <span class="visually-hidden">Уведомления</span>
+        </a>
+        <div class="main-header__profile  profile">
+          <a class="profile__name" href="#">ООО «Родные Просторы»</a>
+          <ul class="profile__list">
+            <li class="profile__item">
+              <a class="profile__link" href="#">Опция 1</a>
+            </li>
+            <li class="profile__item">
+              <a class="profile__link" href="#">Опция 2</a>
+            </li>
+            <li class="profile__item">
+              <a class="profile__link" href="#">Опция 3</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
     <main>
-      <section class="payment-order">
-        <div class="payment-order__content  content">
-          <div class="payment-order__card">
-            <header class="payment-order__header">
-              <button type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-              <h2>Платежное поручение № 5241234 от 23.09.2015</h2>
-            </header>
-            <div class="payment-order__main">
+      <section class="payment-order  content">
+        <div class="payment-order__card">
+          <header class="payment-order__header">
+            <button type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <h2>Платежное поручение № 5241234 от 23.09.2015</h2>
+          </header>
+          <div class="payment-order__main">
+            <div class="payment-order__transaction-wrapper">
               <div class="payment-order__transaction-information  transaction-information">
                 <p>– 23 500,00 ₽</p>
                 <p>
@@ -98,79 +96,83 @@
                   <span>Исполнен</span>, <span>21 июня 15:33</span>
                 </p>
               </div>
-              <div class="payment-order__company-card  company-card">
-                <div class="company-card__account-details  account-details">
-                  <h3>ООО "Родные просторы"</h3>
-                  <ul class="account-details__list">
-                    <li class="account-details__item">
-                      ИНН: 22341497819132
-                    </li>
-                    <li class="account-details__item">
-                      Банк: ОАО Сбербанк
-                    </li>
-                    <li class="account-details__item">
-                      БИК: 2352362365
-                    </li>
-                    <li class="account-details__item">
-                      Счет: 40802810970010000395
-                    </li>
-                  </ul>
-                </div>
-                <p>
-                  Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
-                </p>
+            </div>
+            <div class="payment-order__account-details  account-details">
+              <div class="account-details__content">
+                <h3>ООО "Родные просторы"</h3>
+                <ul class="account-details__list">
+                  <li class="account-details__item">
+                    ИНН: 22341497819132
+                  </li>
+                  <li class="account-details__item">
+                    Банк: ОАО Сбербанк
+                  </li>
+                  <li class="account-details__item">
+                    БИК: 2352362365
+                  </li>
+                  <li class="account-details__item">
+                    Счет: 40802810970010000395
+                  </li>
+                </ul>
               </div>
+            </div>
+            <div class="payment-order__description">
+              <p>
+                Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+              </p>
+            </div>
+            <div class="payment-order__commission">
               <p>Комиссия банка: <span>70</span> р. <br>
                 Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным. Точный размер комиссии определяется после передачи платежного документа на обработку в банк.</p>
             </div>
-            <footer class="payment-footer">
-              <ul class="payment-footer__list">
-                <li class="payment-footer__item">
-                  <a class="payment-footer__link" href="#">
-                    <svg>
-                      <use xlink:href="#spr-repeat"></use>
-                    </svg>
-                    <span>Повторить</span>
-                  </a>
-                </li>
-                <li class="payment-footer__item">
-                  <a class="payment-footer__link" href="#">
-                    <svg>
-                      <use xlink:href="#spr-star"></use>
-                    </svg>
-                    <span>В избранное</span>
-                  </a>
-                </li>
-                <li class="payment-footer__item">
-                  <a class="payment-footer__link" href="#">
-                    <svg>
-                      <use xlink:href="#spr-ask"></use>
-                    </svg>
-                    <span>Спросить</span>
-                  </a>
-                </li>
-                <li class="payment-footer__item  payment-footer__item--list">
-                  <a class="payment-footer__link" href="#">
-                    <svg>
-                      <use xlink:href="#spr-more"></use>
-                    </svg>
-                    <span>Действия</span>
-                  </a>
-                  <ul class="payment-footer__deep-list">
-                    <li class="payment-footer__deep-item">
-                      <a class="payment-footer__deep-link" href="#"></a>
-                    </li>
-                    <li class="payment-footer__deep-item">
-                      <a class="payment-footer__deep-link" href="#"></a>
-                    </li>
-                    <li class="payment-footer__deep-item">
-                      <a class="payment-footer__deep-link" href="#"></a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </footer>
           </div>
+          <footer class="payment-order__footer  payment-footer">
+            <ul class="payment-footer__list">
+              <li class="payment-footer__item">
+                <a class="payment-footer__link" href="#">
+                  <svg>
+                    <use xlink:href="#spr-repeat"></use>
+                  </svg>
+                  <span>Повторить</span>
+                </a>
+              </li>
+              <li class="payment-footer__item">
+                <a class="payment-footer__link" href="#">
+                  <svg>
+                    <use xlink:href="#spr-star"></use>
+                  </svg>
+                  <span>В избранное</span>
+                </a>
+              </li>
+              <li class="payment-footer__item">
+                <a class="payment-footer__link" href="#">
+                  <svg>
+                    <use xlink:href="#spr-ask"></use>
+                  </svg>
+                  <span>Спросить</span>
+                </a>
+              </li>
+              <li class="payment-footer__item  payment-footer__item--list">
+                <a class="payment-footer__link" href="#">
+                  <svg>
+                    <use xlink:href="#spr-more"></use>
+                  </svg>
+                  <span>Действия</span>
+                </a>
+                <ul class="payment-footer__deep-list">
+                  <li class="payment-footer__deep-item">
+                    <a class="payment-footer__deep-link" href="#">Действие 1</a>
+                  </li>
+                  <li class="payment-footer__deep-item">
+                    <a class="payment-footer__deep-link" href="#">Действие 2</a>
+                  </li>
+                  <li class="payment-footer__deep-item">
+                    <a class="payment-footer__deep-link" href="#">Действие 3</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </footer>
         </div>
       </section>
     </main>

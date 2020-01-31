@@ -2,44 +2,76 @@
   &__list {
     @include list-reset;
     display: flex;
-    padding-top: 14px;
   }
 
   &__item {
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
     padding-bottom: 16px;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     text-transform: uppercase;
 
-    &:not(:last-of-type) {
-      margin-right: 37px;
-    }
-
     &.active {
-      border-bottom: 5px solid #8dc540;
-
       & .main-nav__link {
+        position: relative;
         opacity: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          width: 100%;
+          height: 5px;
+          background-color: #8dc540;
+        }
       }
     }
 
     &--list {
+      position: relative;
       padding-right: 13px;
       background-image: url("../img/svg/icon-arrow.svg");
-      background-position: 100% 4px;
+      background-position: 100% calc(50% - 1px);
       background-repeat: no-repeat;
+
+      & .main-nav__link {
+        &:hover,
+        &:focus {
+          & + .main-nav__deep-list {
+            height: auto;
+            box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
     }
   }
 
   &__link {
+    position: relative;
     opacity: 0.8;
     color: $light-text-color;
     text-decoration: none;
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background-color: #ffffff;
+      transition-duration: 0.3s;
+    }
+
     &:hover,
     &:focus {
       opacity: 0.9;
+
+      &::before {
+        width: 100%;
+      }
     }
 
     &:active {
@@ -49,6 +81,43 @@
 
   &__deep-list {
     @include list-reset;
-    display: none;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #237cb1;
+
+    &:hover,
+    &:focus-within {
+      height: auto;
+      box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__deep-item {
+    padding-top: 8px;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+
+  &__deep-link {
+    color: $light-text-color;
+    text-decoration: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid #ffffff;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
