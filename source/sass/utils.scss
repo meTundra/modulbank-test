@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $roboto;
+  background-color: $main-background-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 1024px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

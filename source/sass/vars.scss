@@ -1,0 +1,19 @@
+$important-text-color: #2b2b2b;
+$main-text-color: #2c2f32;
+$main-background-color: #edeff1;
+$secondary-text-color: #808080;
+$light-text-color: #ffffff;
+$negative-number-color: #cf4545;
+$roboto: "Roboto", "Arial", sans-serif;
+
+@mixin list-reset {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin text-block-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+}

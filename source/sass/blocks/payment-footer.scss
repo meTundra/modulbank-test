@@ -1,0 +1,40 @@
+.payment-footer {
+  padding-top: 20px;
+  padding-right: 171px;
+  padding-bottom: 20px;
+  padding-left: 184px;
+  width: 100%;
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.239102),
+    0 0 15px rgba(0, 0, 0, 0.0869282);
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    color: $main-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+
+    & svg {
+      margin-right: 9px;
+      width: 22px;
+      height: 20px;
+    }
+
+    & span {
+      padding-top: 3px;
+    }
+  }
+
+  &__deep-list {
+    @include list-reset;
+    display: none;
+  }
+}

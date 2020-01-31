@@ -1,0 +1,25 @@
+.company-card {
+  width: 545px;
+
+  &__account-details {
+    margin-right: auto;
+  }
+
+  & > p {
+    @include text-block-reset;
+    position: relative;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    background-color: #f2f2f2;
+    box-shadow:
+      0 0 1px rgba(0, 0, 0, 0.239102),
+      0 4px 15px rgba(0, 0, 0, 0.0869282),
+      0 2px 3px rgba(0, 0, 0, 0.0651891);
+    mix-blend-mode: normal;
+    font-size: 16px;
+    line-height: 20px;
+    z-index: 0;
+  }
+}
