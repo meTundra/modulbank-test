@@ -1,10 +1,13 @@
 .account-details {
   position: relative;
   padding-top: 25px;
-  padding-right: 45px;
+  padding-right: 235px;
   padding-bottom: 17px;
   padding-left: 30px;
   width: 545px;
+  background-image: url("../img/advantages.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 45px) 12px;
   color: $main-text-color;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.390682), 0 3px 10px rgba(0, 0, 0, 0.0869282);
   z-index: 1;
@@ -31,13 +34,6 @@
     box-shadow:
       inset 0 -2px 1px -2px rgba(0, 0, 0, 0.390682),
       inset 0 -9px 10px -10px rgba(0, 0, 0, 0.0869282);
-  }
-
-  &__content {
-    padding-right: 190px;
-    background-image: url("../img/advantages.png");
-    background-repeat: no-repeat;
-    background-position: 100% -12px;
   }
 
   & h3 {

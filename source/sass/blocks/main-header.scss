@@ -41,9 +41,18 @@
   }
 
   & label {
+    position: relative;
     padding-left: 18px;
-    background-image: url("../img/svg/icon-search.svg");
-    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/svg/icon-search.svg");
+      background-repeat: no-repeat;
+    }
 
     & input {
       margin-left: 10px;
@@ -73,7 +82,7 @@
   }
 
   &__nav {
-    margin-right: 114px;
+    margin-right: 94px;
     transition-duration: 0.3s;
 
     @media (max-width: 1090px) {
