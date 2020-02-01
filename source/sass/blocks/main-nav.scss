@@ -33,19 +33,19 @@
     &--list {
       position: relative;
 
+      &:hover,
+      &:focus-within {
+        & .main-nav__deep-list {
+          height: auto;
+          box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2);
+        }
+      }
+
       & .main-nav__link {
         padding-right: 16px;
         background-image: url("../img/svg/icon-arrow.svg");
         background-position: calc(100% - 1px) calc(50% - 1px);
         background-repeat: no-repeat;
-
-        &:hover,
-        &:focus {
-          & + .main-nav__deep-list {
-            height: auto;
-            box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.2);
-          }
-        }
       }
     }
   }
@@ -83,7 +83,7 @@
   &__deep-list {
     @include list-reset;
     position: absolute;
-    top: 35px;
+    top: 41px;
     width: 100%;
     height: 0;
     overflow: hidden;
